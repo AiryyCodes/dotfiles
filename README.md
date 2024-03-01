@@ -24,4 +24,6 @@ cp -r dotfiles/.config/ ~/.config
 ```
 
 One line version:
-`cd ~/Downloads && git clone https://github.com/AiryyCodes/dotfiles.git && cp -r dotfiles/.config/ ~/.config`
+```
+cd ~/Downloads && git clone https://github.com/AiryyCodes/dotfiles.git && cp -r dotfiles/.config/ ~/.config
+```
