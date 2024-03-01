@@ -15,7 +15,7 @@
 ### Install Requirements
 * Git
 
-## Installing
+### Installing
 To install you need to run these commands:
 ```
 cd ~/Downloads
@@ -27,3 +27,7 @@ One line version:
 ```
 cd ~/Downloads && git clone https://github.com/AiryyCodes/dotfiles.git && cp -r dotfiles/.config/ ~/.config
 ```
+
+### Info
+If you have trouble with multiple monitors, go into `~/.config/hypr/hyprland.conf` and change the monitor settings accordingly to your setup.
+To see what your monitors are named run `hyprctl monitors` in the terminal.
