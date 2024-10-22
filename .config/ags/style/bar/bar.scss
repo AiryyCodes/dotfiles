@@ -1,0 +1,74 @@
+.bar-box {
+    // @include rounded;
+
+    background-color: transparent;
+    //background-color: $background;
+    padding: 0px;
+    margin: 8px 8px 2px 8px;
+
+    //margin-bottom: 8px;
+
+    //border: solid;
+    //border-width: 2px;
+    //border-color: rgba(20, 24, 29, 1);
+    // margin: 8px 8px 0px 8px;
+}
+
+.workspaces {
+    @include rounded-slight;
+    @include button;
+
+    padding-left: 6px;
+    padding-right: 10px;
+
+    border: none;
+}
+
+.workspace-btn {
+    @include rounded-full;
+
+    font-size: 0;
+    background: #272A30;
+    margin-left: 4pt;
+    min-width: 10pt;
+    min-height: 10pt;
+    transition: all ease-in-out 0.2s;
+
+    &.active {
+        background: $primary;
+        border-radius: 6px;
+        min-width: 18pt;
+        min-height: 10pt;
+    }
+}
+
+.date-text {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.date {
+    @include rounded-slight;
+    @include button;
+
+    color: #A7ADB8;
+    padding: 0 10px 0 10px;
+
+    border: none;
+}
+
+.action-bg {
+    @include rounded-slight;
+    @include button;
+
+    font-family: "Outfit", sans-serif;
+
+    padding: 0 10px 0 10px;
+
+    font-weight: 100;
+    font-size: 16px;
+    color: $secondary;
+
+    border: none;
+}

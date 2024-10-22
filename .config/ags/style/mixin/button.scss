@@ -1,0 +1,11 @@
+@mixin button {
+    background: $background;
+
+    &:hover {
+        background: $background;
+    }
+
+    &:active {
+        background: $background;
+    }
+}

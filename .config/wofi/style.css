@@ -1,0 +1,46 @@
+window {
+    margin: 5px;
+    border-radius: 8px;
+    border: 2px solid #61afef;
+    background-color: #1f2329;
+}
+    
+#input {
+    border-radius: 8px;
+    background-color: #ABB2BF;
+    border: none;
+}
+
+#entry {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.15s;
+}
+
+#entry:selected {
+    background-color: #61afef;
+}
+
+#entry:selected #text {
+    color: #1f2329;
+}
+    
+#inner-box {
+    padding: 4px;
+}   
+    
+#outer-box {
+    padding: 12px;
+}
+    
+#scroll {
+    display: none;
+    margin: 5px;
+}
+
+#text {
+    color: #ABB2BF;
+    transition: all 0.15s;
+}

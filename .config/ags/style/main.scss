@@ -1,0 +1,64 @@
+@import "./colors.scss";
+
+@import "./mixin/common.scss";
+@import "./mixin/button.scss";
+
+* {
+    font-family: "Outfit", sans-serif;
+
+    -gtk-icon-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    //-gtk-secondary-caret-color: transparent;
+    //outline-color: transparent;
+}
+
+undershoot {
+    background: none;
+}
+
+overshoot {
+    background: none;
+}
+
+scrollbar,
+scrollbar * {
+    all: unset;
+    transition: background-color 0.2s linear;
+}
+
+scrollbar {
+    @include rounded;
+
+    min-width: 4px;
+    background-color: $background-accent1;
+
+    &:hover {
+        background-color: $background-accent2;
+    }
+}
+
+.transparent {
+    background-color: transparent;
+    background: transparent;
+    caret-color: transparent;
+
+    transition: all 0ms;
+
+    border: none;
+}
+
+.popup-window {
+    background-color: transparent;
+    background: transparent;
+    caret-color: transparent;
+
+    transition: all 0ms;
+
+    border: none;
+}
+
+@import "./notifications.scss";
+@import "./bar/bar.scss";
+@import "./action-menu/action-menu.scss";
+@import "./action-menu/shutdown-menu.scss";

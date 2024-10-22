@@ -1,0 +1,30 @@
+.shutdown-menu {
+    @include rounded;
+
+    background: $background-accent1;
+    padding: 8px;
+
+    //margin-top: 144px;
+    //margin-right: 32px;
+}
+
+.shutdown-button {
+    @include rounded;
+
+    background: $background-accent1;
+    color: $secondary;
+    border: none;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    font-weight: 500;
+
+    &:hover {
+        background: $background-accent2;
+    }
+
+    &:active {
+        background: $background-accent1;
+    }
+}

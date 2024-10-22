@@ -1,0 +1,11 @@
+@mixin rounded-slight {
+    border-radius: 8px;
+}
+
+@mixin rounded {
+    border-radius: 12px;
+}
+
+@mixin rounded-full {
+    border-radius: 100%;
+}

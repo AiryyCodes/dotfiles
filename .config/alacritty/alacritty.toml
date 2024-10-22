@@ -1,0 +1,12 @@
+[colors.primary]
+background = "#14181d"
+
+[font]
+size = 12
+
+[font.normal]
+family = "CaskaydiaCove NF"
+
+[window.padding]
+x = 8
+y = 8

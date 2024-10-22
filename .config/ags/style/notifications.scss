@@ -1,0 +1,53 @@
+.notifications {
+}
+
+.notification {
+    @include rounded;
+
+    min-width: 350px;
+
+    background-color: $background;
+    //border: solid;
+    border-width: 2px;
+    border-color: $primary;
+
+    padding: 12px;
+}
+
+.notif-title {
+    font-size: larger;
+}
+
+.notif-body {
+    font-size: medium;
+    color: $secondary;
+}
+
+.notif-icon {
+    @include rounded;
+
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 48px;
+    margin-right: 8px;
+    color: $secondary;
+}
+
+.notif-action-button {
+    @include rounded;
+
+    color: $secondary;
+
+    border: none;
+    background: $background-accent1;
+
+    margin-top: 16px;
+
+    &:hover {
+        background: $background-accent2;
+    }
+
+    &:active {
+        background: $background-accent1;
+    }
+}

@@ -1,0 +1,80 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """\
+[](bg:#14181d fg:#5D8BD9)\
+$os\
+$username\
+[](bg:#A7ADB8 fg:#5D8BD9)\
+$directory\
+[](bg:#14181d fg:#A7ADB8)\
+$line_break\
+$character 
+"""
+
+[directory]
+format ="[ $path ]($style)"
+style = "bg:#A7ADB8 fg:#14181d"
+truncation_length = 10
+truncation_symbol = "./"
+
+[os]
+format ="[ $symbol ]($style)"
+style = "bg:#5D8BD9 fg:#14181d"
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+style_user = "bg:#5D8BD9 fg:#14181d"
+style_root = "bg:#5D8BD9 fg:#14181d"
+format = '[ $user ]($style)'
+disabled = false
+show_always = true
+aliases = { "corpuser034g" = "matchai" }
+
+[git_branch]
+symbol = '🌱 '
+truncation_length = 4
+truncation_symbol = ''
+ignore_branches = ['master', 'main']
+
+[git_status]
+format ="([\\[$all_status$ahead_behind\\]]($style) )"
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_green)'
+error_symbol = '[](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'

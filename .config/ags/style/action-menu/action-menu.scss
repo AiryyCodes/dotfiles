@@ -1,0 +1,63 @@
+.action-menu {
+    @include rounded;
+
+    min-width: 380px;
+    //min-height: 600px;
+    //margin-top: 56px;
+    //margin-right: 8px;
+    //padding: 16px;
+    padding: 8px 16px 8px 16px;
+
+    background: $background;
+    //border: solid;
+    border-width: 2px;
+    border-color: $primary;
+    color: $secondary;
+    //box-shadow: -8px 60px 7px 3px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+    @include rounded-full;
+
+    //border: solid $background-accent3;
+    border: none;
+    border-width: 0px;
+    font-size: 64px;
+    padding: 4px;
+}
+
+.username {
+    font-family: "Outfit", sans-serif;
+    font-size: large;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+.action-button {
+    @include rounded;
+
+    font-size: 20px;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    color: $secondary;
+
+    border: none;
+    //border: solid #e55561;
+    //border-width: 2px;
+
+    background: $background-accent1;
+
+    &:hover {
+        background: $background-accent2;
+    }
+
+    &:active {
+        background: $background-accent1;
+    }
+}
+
+.action-icon {
+    border: none;
+}
