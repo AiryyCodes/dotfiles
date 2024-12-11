@@ -123,6 +123,13 @@ local plugins = {
     	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     	ft = { "markdown" },
     	build = function() vim.fn["mkdp#util#install"]() end,
+	},
+    {
+		'nvim-telescope/telescope.nvim',
+		dependencies = { 'nvim-lua/plenary.nvim' },
+		config = function()
+			require 'config.telescope'
+		end
 	}
 }
 
