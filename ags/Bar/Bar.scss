@@ -1,0 +1,41 @@
+@use "../Colors.scss";
+
+window.Bar {
+    all: unset;
+
+    background: transparent;
+    color: Colors.$fg-color;
+    font-weight: bold;
+    transition: all 1s;
+
+    >centerbox {
+        // background: $bg-color;
+        border-radius: 10px;
+        margin: 8px;
+        transition: all 1s;
+        
+    }
+
+    button {
+        border-radius: 8px;
+        margin: 2px;
+    }
+
+    .BarBox {
+      transition: all 1s;
+      padding: 4px;
+      border-radius: 9999px;
+      background: Colors.$bg-color;
+
+      .Workspace {
+        transition: all 1s ease;
+        border-radius: 9999px;
+        background: Colors.$fg-color;
+
+        color: Colors.$bg-color;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 8px 12px 8px 12px;
+      }
+    }
+}
