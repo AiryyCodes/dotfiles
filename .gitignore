@@ -70,3 +70,7 @@ QtProject
 node_modules
 Session.vim
 Moonlight*
+Cursor
+csharp.history
+create-next-app-nodejs
+starship.toml.save
