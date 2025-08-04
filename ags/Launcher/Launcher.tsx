@@ -8,7 +8,13 @@ function hide() {
     App.get_window("AppLauncher")!.hide();
 }
 
-function AppButton({ app }: { app: Apps.Application }) {
+function AppButton({
+    app,
+    ...rest
+}: {
+    app: Apps.Application;
+    [key: string]: unknown;
+}) {
     return (
         <button
             className="AppButton"
@@ -22,6 +28,7 @@ function AppButton({ app }: { app: Apps.Application }) {
                     app.launch();
                 }
             }}
+            {...rest}
         >
             <box>
                 <icon icon={app.iconName} />
@@ -39,6 +46,8 @@ export default function Launcher(/* gdkmonitor: Gdk.Monitor */) {
 
     const text = Variable("");
 
+    const firstAppButton = Variable<Gtk.Widget | null>(null);
+
     const list = text((text) => apps.fuzzy_query(text).slice(0, MAX_ITEMS));
     const onEnter = () => {
         apps.fuzzy_query(text.get())?.[0].launch();
@@ -50,6 +59,16 @@ export default function Launcher(/* gdkmonitor: Gdk.Monitor */) {
         text: text(),
         onChanged: (self) => text.set(self.text),
         onActivate: onEnter,
+        onKeyPressEvent: (self, event) => {
+            const [, keyval] = event.get_keyval();
+
+            if (keyval === Gdk.KEY_Down) {
+                firstAppButton.get()?.grab_focus();
+                return true;
+            }
+
+            return false;
+        },
     });
 
     return (
@@ -84,18 +103,16 @@ export default function Launcher(/* gdkmonitor: Gdk.Monitor */) {
                     <eventbox heightRequest={100} onClick={hide} />
                     <box widthRequest={500} className="Applauncher" vertical>
                         {entry}
-                        {/*
-                        <entry
-                            placeholderText="Search"
-                            text={text()}
-                            onChanged={(self) => text.set(self.text)}
-                            onActivate={onEnter}
-                        />
-                        */}
                         <box spacing={8} halign={Gtk.Align.CENTER}>
                             {list.as((list) =>
-                                list.map((app: Apps.Application) => (
-                                    <AppButton app={app} />
+                                list.map((app: Apps.Application, i: number) => (
+                                    <AppButton
+                                        app={app}
+                                        setup={(self: any) => {
+                                            if (i === 0)
+                                                firstAppButton.set(self);
+                                        }}
+                                    />
                                 ))
                             )}
                         </box>

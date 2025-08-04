@@ -5,10 +5,10 @@
 }
 
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-$fg-color: #dbdee4;
-$bg-color: #0c0c0d;
-$bg-color-2: #151517;
-$bg-color-3: #1d1d21;
+$fg-color: #cdd6f4;
+$bg-color: #181825;
+$bg-color-2: #1e1e2e;
+$bg-color-3: #313244;
 
 window#AppLauncher {
   all: unset;
@@ -47,7 +47,7 @@ window#AppLauncher {
       border-radius: 16px;
 
       &:focus {
-        background-color: $bg-color-2;
+        background-color: $bg-color-3;
       }
 
       icon {

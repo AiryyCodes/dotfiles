@@ -74,3 +74,6 @@ Cursor
 csharp.history
 create-next-app-nodejs
 starship.toml.save
+arduino-ide
+sunshine
+tmux/plugins
