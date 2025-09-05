@@ -1,0 +1,9 @@
+*
+!.gitignore
+!starship.toml
+!nvim
+!tmux
+tmux/plugins/
+!ags
+!hypr
+!kitty

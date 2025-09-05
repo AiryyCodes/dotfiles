@@ -1,0 +1,10 @@
+confirm_os_window_close 0
+
+window_padding_width 12 16
+
+font_family CaskaydiaCove NF
+
+background #0c0c0d
+foreground #abb2bf
+
+enable_audio_bell false

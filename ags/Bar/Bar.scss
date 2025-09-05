@@ -1,0 +1,80 @@
+@use "../Colors.scss";
+
+window.Bar {
+  all: unset;
+
+  background: transparent;
+  color: Colors.$fg-color;
+  font-weight: bold;
+  transition: all 1s;
+
+  >centerbox {
+    background: Colors.$bg-color;
+    border-radius: 10px;
+    margin: 8px;
+    transition: all 1s;
+    border-radius: 9999px;
+    min-height: 36px;
+    padding: 2px 12px 2px 12px
+  }
+
+  button {
+    border-radius: 8px;
+    margin: 2px;
+  }
+
+  .BarBox {
+    transition: all 100ms;
+    border-radius: 9999px;
+    background: Colors.$bg-color;
+
+    >button {
+      background: transparent;
+      border-radius: 9999px;
+
+      &:hover {
+        background: Colors.$bg-color1;
+      }
+    }
+
+    .Workspace {
+      transition: all 250ms ease;
+      border-radius: 9999px;
+
+      color: Colors.$bg-color;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .WorkspaceActive {
+      transition: all 250ms ease;
+      border-radius: 9999px;
+
+      background: Colors.$fg-color2;
+
+      color: Colors.$bg-color;
+      font-size: 16px;
+      font-weight: 500;
+
+      padding: 4px
+    }
+
+    .WorkspaceEmpty {
+      min-width: 8px;
+      min-height: 8px;
+      background: Colors.$fg-color2;
+      border-radius: 50%;
+      margin-top: 8px; // spacing around it
+      margin-bottom: 8px; // spacing around it
+    }
+
+    .WorkspaceEmptyActive {
+      min-width: 8px; // size of the dot
+      min-height: 8px;
+      background: Colors.$fg-color1; // or whatever color you want
+      border-radius: 50%; // makes it a circle
+      margin-top: 8px; // spacing around it
+      margin-bottom: 8px; // spacing around it
+    }
+  }
+}

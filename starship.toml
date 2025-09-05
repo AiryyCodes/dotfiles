@@ -1,0 +1,15 @@
+add_newline = false
+
+format = '''
+$directory $git_branch $git_status
+> 
+'''
+
+[directory]
+format = "$path"
+
+[git_branch]
+format = '- [$branch](foreground)'
+
+[git_status]
+format = "$status"
