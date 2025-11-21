@@ -1,2 +1,68 @@
-@use "./Launcher/Launcher.scss";
-@use "./Bar/Bar.scss";
+$bg-color: #11111b;
+$bg-color1: #181825;
+$bg-color2: #1e1e2e;
+$bg-color3: #313244;
+$primary-color: #cba6f7;
+$fg-color: #cdd6f4;
+
+window#bar {
+  background: transparent;
+  color: $fg-color;
+  font-weight: bold;
+
+  >box {
+    background: $bg-color;
+    padding: 4px;
+  }
+
+  .workspace-button {
+    border-radius: 9999px;
+    background: $bg-color2;
+
+    min-height: 0.65em;
+    min-width: 0.65rem;
+
+    transition: all 0.25s ease-in-out;
+
+    &.active {
+      min-width: 1.5rem;
+      // min-height: 0.95rem;
+      background-color: $primary-color;
+    }
+
+    &.occupied {
+      background-color: $bg-color3;
+
+      &.active {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+button {
+  background: none;
+  border-radius: 0.75rem;
+
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    background: $bg-color1;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+window#launcher {
+  background: transparent;
+  color: $fg-color;
+
+  box#launcher-content {
+    background: $bg-color;
+    min-width: 400px;
+    border-radius: 12px;
+    padding: 6px;
+  }
+}
