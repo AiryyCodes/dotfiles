@@ -1,0 +1,24 @@
+{
+    "id": "catppuccin",
+    "name": "Catppuccin",
+    "colors": {
+        "background": "#1e1e2e",
+        "surface": "#313244",
+        "surfaceHover": "#45475a",
+        "surfacePress": "#313244",
+        "ghostHover": "#313244",
+        "ghostPress": "#45475a",
+        "text": "#cdd6f4",
+        "muted": "#a0a0a0",
+        "accent": "#4c8dff",
+        "border": "#313244"
+    },
+    "font": {
+        "size": {
+            "small": "12",
+            "normal": "13",
+            "large": "14"
+        }
+    },
+    "radius": 12
+}
